@@ -3,11 +3,30 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_LauguageCharacter", "DesignPattern\1_LauguageCharacter.csproj", "{EA93F334-385C-429A-B531-952A5251677E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1_LauguageCharacter", "DesignPattern\1_LauguageCharacter.csproj", "{EA93F334-385C-429A-B531-952A5251677E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1_Preparation", "1_Preparation", "{B9CB0868-A9B8-41CE-9440-40AB36DB2D84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_LanguageCharacter.Tests", "1_LanguageCharacter.Tests\1_LanguageCharacter.Tests.csproj", "{5EE6C8C0-3668-41A0-B1E1-8FE9BD25FDB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1_LanguageCharacter.Tests", "1_LanguageCharacter.Tests\1_LanguageCharacter.Tests.csproj", "{5EE6C8C0-3668-41A0-B1E1-8FE9BD25FDB6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2_CreationalPattern", "2_CreationalPattern", "{D05C2F6E-F3A6-4015-8855-194697431844}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3_StructuralPattern", "3_StructuralPattern", "{593A8778-A6AC-40E8-A104-30ADE90DAC31}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4_BehavioralPattern", "4_BehavioralPattern", "{AA9E98DF-E9E9-422A-925B-5238827491B7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_1_Factory", "_1_Factory\_1_Factory.csproj", "{ED967432-1974-46D3-A2B0-4B7E45C5C057}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_1_Factory.Tests", "_1_Factory.Tests\_1_Factory.Tests.csproj", "{AAB2A5BB-C0DC-4BCC-AF67-F23FE4B6FBAC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "notes", "notes", "{3259FE22-3903-4F57-884D-7EC96D9E8DBF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pics", "pics", "{E7FA86F1-F190-4434-AF7E-C4C3CCA4FFD8}"
+	ProjectSection(SolutionItems) = preProject
+		pics\1.factorymethod+IOC.JPG = pics\1.factorymethod+IOC.JPG
+		pics\1.factorymethod.JPG = pics\1.factorymethod.JPG
+		pics\1.samplefactory.JPG = pics\1.samplefactory.JPG
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +42,14 @@ Global
 		{5EE6C8C0-3668-41A0-B1E1-8FE9BD25FDB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EE6C8C0-3668-41A0-B1E1-8FE9BD25FDB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EE6C8C0-3668-41A0-B1E1-8FE9BD25FDB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED967432-1974-46D3-A2B0-4B7E45C5C057}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED967432-1974-46D3-A2B0-4B7E45C5C057}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED967432-1974-46D3-A2B0-4B7E45C5C057}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED967432-1974-46D3-A2B0-4B7E45C5C057}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAB2A5BB-C0DC-4BCC-AF67-F23FE4B6FBAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAB2A5BB-C0DC-4BCC-AF67-F23FE4B6FBAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAB2A5BB-C0DC-4BCC-AF67-F23FE4B6FBAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAB2A5BB-C0DC-4BCC-AF67-F23FE4B6FBAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +57,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{EA93F334-385C-429A-B531-952A5251677E} = {B9CB0868-A9B8-41CE-9440-40AB36DB2D84}
 		{5EE6C8C0-3668-41A0-B1E1-8FE9BD25FDB6} = {B9CB0868-A9B8-41CE-9440-40AB36DB2D84}
+		{ED967432-1974-46D3-A2B0-4B7E45C5C057} = {D05C2F6E-F3A6-4015-8855-194697431844}
+		{AAB2A5BB-C0DC-4BCC-AF67-F23FE4B6FBAC} = {D05C2F6E-F3A6-4015-8855-194697431844}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {82592DCD-B675-4D0C-9EC2-0918A981A934}
