@@ -25,12 +25,19 @@ namespace _1_GenericFactory
 
     public abstract class FactoryBase<T> : IFactory<T> where T : new()
     {
-        public T Create()
+        public virtual T Create()
         {
             return new T();
         }
     }
 
-    public class ProductAFactory : FactoryBase<ProductA> { }
+    public class ProductAFactory : FactoryBase<ProductA>
+    {
+
+        public override ProductA Create()
+        {
+            return new ProductA();
+        }
+    }
     public class ProductBFactory : FactoryBase<ProductB> { }
 }

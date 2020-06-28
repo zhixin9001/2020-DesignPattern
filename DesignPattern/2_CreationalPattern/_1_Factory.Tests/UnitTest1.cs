@@ -46,9 +46,11 @@ namespace _1_Factory.Tests
         [Test]
         public void CalculateHandlerTest()
         {
-            CalculateHandler handler = new CalculateHandlerFactory().Create();
+            CalculateHandler addHandler = new AddHandlerFactory().Create();
+            Assert.AreEqual(1 + 2 + 3, addHandler(1, 2, 3));
 
-            Assert.AreEqual(1 + 2 + 3, handler(1, 2, 3));
+            CalculateHandler multiHandler = new MultiHandlerFactory().Create();
+            Assert.AreEqual(1 * 2 * 3, multiHandler(1, 2, 3));
         }
     }
 }

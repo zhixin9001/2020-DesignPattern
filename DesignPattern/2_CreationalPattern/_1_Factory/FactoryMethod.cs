@@ -10,6 +10,7 @@ namespace _1_FactoryMethod
         string Name { get; } //抽象产品所必须具有的特征
     }
 
+    //具体产品类型
     public class ProductA : IProduct
     {
         public string Name { get { return "A"; } }
@@ -19,10 +20,13 @@ namespace _1_FactoryMethod
         public string Name { get { return "B"; } }
     }
 
+    //抽象工厂类型
     public interface IFactory
     {
         IProduct Create(); //抽象的工厂描述
     }
+
+    //具体工厂类型
     public class FactoryA : IFactory
     {
         public IProduct Create()
