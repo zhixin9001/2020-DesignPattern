@@ -1,4 +1,7 @@
 using NUnit.Framework;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace _3_AbstractFactory.Tests
 {
@@ -30,12 +33,6 @@ namespace _3_AbstractFactory.Tests
 
             Assert.AreEqual(typeof(ProductA2), productA.GetType());
             Assert.AreEqual(typeof(ProductB2), productB.GetType());
-        }
-
-        [Test]
-        public void AbstractFactoryWithMapperTest()
-        {
-
         }
     }
 }
