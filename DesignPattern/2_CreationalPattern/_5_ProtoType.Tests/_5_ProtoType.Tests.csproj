@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\_4_Builder\_4_Builder.csproj" />
+    <ProjectReference Include="..\_5_ProtoType\_5_ProtoType.csproj" />
   </ItemGroup>
 
 </Project>
