@@ -25,7 +25,8 @@ namespace _4_Builder
 
     public class CarBuilder : IBuilder
     {
-        private Car car;
+        private Car car = new Car();
+        public Car Car => car;
         public void BuildPart1()
         {
             car.AddEngine();
@@ -42,7 +43,8 @@ namespace _4_Builder
 
     public class HouseBuilder : IBuilder
     {
-        private House house;
+        private House house = new House();
+        public House House => house;
         public void BuildPart1()
         {
             house.AddWallAndFloor();

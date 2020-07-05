@@ -12,12 +12,10 @@ namespace _4_Builder.Tests
         {
             IBuilder<Car> builder = new ConcreteCarBuilder();
             var product = builder.BuildUp();
-            Assert.IsNotNull(product);
             Assert.AreEqual(typeof(Car), product.GetType());
 
             IBuilder<House> builder1 = new ConcreteHouseBuilder();
             var product1 = builder1.BuildUp();
-            Assert.IsNotNull(product1);
             Assert.AreEqual(typeof(House), product1.GetType());
         }
     }
