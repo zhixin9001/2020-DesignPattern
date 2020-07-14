@@ -18,7 +18,7 @@ namespace _2_Bridge
     {
         public void OperationImpl()
         {
-            Console.WriteLine("A Operation");
+            ...
         }
     }
 
@@ -26,7 +26,7 @@ namespace _2_Bridge
     {
         public void OperationImpl()
         {
-            Console.WriteLine("B Operation");
+            ...
         }
     }
 

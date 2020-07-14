@@ -24,17 +24,77 @@ namespace _3_Composite
             get { return children[index]; }
         }
 
+        //public virtual IEnumerable<string> GetNameList()
+        //{
+        //    yield return Name;
+        //    if (children != null && children.Count > 0)
+        //    {
+        //        foreach (Component child in children)
+        //        {
+        //            foreach (string item in child.GetNameList())
+        //            {
+        //                yield return item;
+        //            }
+        //        }
+        //    }
+        //}
+
+        public List<string> names = new List<string>();
         public virtual IEnumerable<string> GetNameList()
         {
-            yield return Name;
+            GetNameList(names);
+            return names;
+        }
+        public virtual IEnumerable<string> GetNameList(IMatchRule rule)
+        {
+            GetNameList(names, rule);
+            return names;
+        }
+
+        public virtual IEnumerable<string> GetNameList(Func<Component, bool> isMatchFunc)
+        {
+            GetNameList(names, isMatchFunc);
+            return names;
+        }
+
+        public virtual void GetNameList(List<string> names)
+        {
+            names.Add(this.Name);
             if (children != null && children.Count > 0)
             {
                 foreach (Component child in children)
                 {
-                    foreach (string item in child.GetNameList())
-                    {
-                        yield return item;
-                    }
+                    child.GetNameList(names);
+                }
+            }
+        }
+
+        public virtual void GetNameList(List<string> names, IMatchRule rule)
+        {
+            if (rule == null || rule.IsMatch(this))
+            {
+                names.Add(this.Name);
+            }
+            if (children != null && children.Count > 0)
+            {
+                foreach (Component child in children)
+                {
+                    child.GetNameList(names, rule);
+                }
+            }
+        }
+
+        public virtual void GetNameList(List<string> names, Func<Component, bool> isMatchFunc)
+        {
+            if (isMatchFunc == null || isMatchFunc(this))
+            {
+                names.Add(this.Name);
+            }
+            if (children != null && children.Count > 0)
+            {
+                foreach (Component child in children)
+                {
+                    child.GetNameList(names, isMatchFunc);
                 }
             }
         }

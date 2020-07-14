@@ -19,7 +19,11 @@ namespace _3_Composite.Tests
             Component sales = factory.Create<Composite>(corporate, "sales");
             factory.Create<Leaf>(sales, "joe");
             factory.Create<Leaf>(sales, "bob");
-            var names = corporate.GetNameList();
+            //var names = corporate.GetNameList();
+            //var names = corporate.GetNameList();
+            //var names = corporate.GetNameList(new LeafMatchRule());
+            var names = corporate.GetNameList(new LeafMatchRule().IsMatch);
+
         }
     }
 }
