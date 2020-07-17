@@ -5,10 +5,41 @@ using System.Text;
 
 namespace _4_Decorator.Undo
 {
+    //引入了状态的概念
     public interface IState
     {
         bool Equals(IState newState);
     }
+
+    //字体是否加粗可以用bool来表示
+    public class BoldState : IState
+    {
+        public bool IsBold;
+        public bool Equals(IState newState)
+        {
+            if (newState == null)
+            {
+                return false;
+            }
+            return ((BoldState)newState).IsBold == IsBold;
+        }
+    }
+
+    //字体颜色的状态比较多
+    public class ColorState : IState
+    {
+        public Color Color = Color.Black;
+        public bool Equals(IState newState)
+        {
+            if (newState == null)
+            {
+                return false;
+            }
+            return ((ColorState)newState).Color == Color;
+        }
+    }
+
+    //基本功能
     public interface IText
     {
         string Content { get; }
@@ -20,6 +51,7 @@ namespace _4_Decorator.Undo
 
     }
 
+    //装饰接口，增加了状态属性和刷新状态的动作
     public interface IDecorator : IText
     {
         IState State { get; set; }
@@ -36,6 +68,7 @@ namespace _4_Decorator.Undo
         public abstract string Content { get; }
         public IState State { get; set; }
 
+        //更新状态的功能
         public virtual void Refresh<T>(IState newState) where T : IDecorator
         {
             if (this.GetType() == typeof(T))
@@ -55,33 +88,7 @@ namespace _4_Decorator.Undo
             }
         }
 
-    }
-
-    public class BoldState : IState
-    {
-        public bool IsBold;
-        public bool Equals(IState newState)
-        {
-            if (newState == null)
-            {
-                return false;
-            }
-            return ((BoldState)newState).IsBold == IsBold;
-        }
-    }
-
-    public class ColorState : IState
-    {
-        public Color Color = Color.Black;
-        public bool Equals(IState newState)
-        {
-            if (newState == null)
-            {
-                return false;
-            }
-            return ((ColorState)newState).Color == Color;
-        }
-    }
+    }    
 
     public class BoldDecorator : DecoratorBase
     {
