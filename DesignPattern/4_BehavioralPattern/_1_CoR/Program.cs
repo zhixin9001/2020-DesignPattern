@@ -12,19 +12,20 @@ namespace _1_CoR
             IHandler handler3 = new MailHandler();
             IHandler handler4 = new RegularHandler();
 
-            handler1.Successor = handler3;
-            handler3.Successor = handler2;
-            handler2.Successor = handler4;
+            handler1.Next = handler3;
+            handler3.Next = handler2;
+            handler2.Next = handler4;
 
             IHandler head = handler1;
             Request request = new Request(20, PurchaseType.Mail);
             head.HandleRequest(request);
-            Console.Write(request.Price);
+            Console.Write(request.Price); //26
 
-            handler1.Successor = handler1.Successor.Successor;
+            //将MailHandler短路
+            handler1.Next = handler1.Next.Next;
             request = new Request(20, PurchaseType.Mail);
             head.HandleRequest(request);
-            Console.Write(request.Price);
+            Console.Write(request.Price); //20
 
         }
     }

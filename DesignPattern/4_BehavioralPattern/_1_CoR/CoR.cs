@@ -6,12 +6,13 @@ namespace _1_CoR
 {
     public enum PurchaseType
     {
-        Internal,
-        Discount,
-        Regular,
-        Mail
+        Internal, //内部认购价格
+        Discount, //折扣价
+        Regular, //平价
+        Mail //邮购价
     }
 
+    //请求对象
     public class Request
     {
         public double Price { get; set; }
@@ -23,10 +24,11 @@ namespace _1_CoR
         }
     }
 
+    //抽象的操作对象
     public interface IHandler
     {
         void HandleRequest(Request request);
-        IHandler Successor { get; set; }
+        IHandler Next { get; set; }
         PurchaseType Type { get; set; }
     }
 
@@ -42,7 +44,9 @@ namespace _1_CoR
 
         public HandlerBase(PurchaseType type) : this(type, null) { }
 
+        //需要具体IHandler类型处理的内容
         public abstract void Process(Request request);
+        //在当前结点处理，还是传递给下一个结点
         public virtual void HandleRequest(Request request)
         {
             if (request == null) return;
