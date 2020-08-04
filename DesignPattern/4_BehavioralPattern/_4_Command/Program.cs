@@ -7,14 +7,14 @@ namespace _4_Command
     {
         static void Main(string[] args)
         {
-            //Receiver receiver = new Receiver();
-            //ICommand command1 = new SetNameCommand();
-            //ICommand command2 = new SetAddressCommand();
-            //command1.Receiver = receiver;
-            //command2.Receiver = receiver;
-            //Invoker invoker = new Invoker();
-            //invoker.AddCommand(command1);
-            //invoker.AddCommand(command2);
+            Receiver receiver = new Receiver();
+            ICommand command1 = new SetNameCommand();
+            ICommand command2 = new SetAddressCommand();
+            command1.Receiver = receiver;
+            command2.Receiver = receiver;
+            Invoker invoker = new Invoker();
+            invoker.AddCommand(command1);
+            invoker.AddCommand(command2);
 
             CommandManager manager = new CommandManager();
             SQLExcute excute = new SQLExcute();
