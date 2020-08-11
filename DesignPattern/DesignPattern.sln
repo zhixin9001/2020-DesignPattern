@@ -71,7 +71,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_2_TemplateMethod", "4_Beha
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_3_Interpreter", "4_BehavioralPattern\_3_Interpreter\_3_Interpreter.csproj", "{D6C7A92D-B814-40E7-80E2-F776DBF388CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_4_Command", "4_BehavioralPattern\_4_Command\_4_Command.csproj", "{1450A5B7-1B09-4A9B-8B37-7C4D345076F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_4_Command", "4_BehavioralPattern\_4_Command\_4_Command.csproj", "{1450A5B7-1B09-4A9B-8B37-7C4D345076F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_5_Interator", "4_BehavioralPattern\_5_Interator\_5_Interator.csproj", "{52611587-7466-422D-87E8-03615F2DDD42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -179,6 +181,10 @@ Global
 		{1450A5B7-1B09-4A9B-8B37-7C4D345076F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1450A5B7-1B09-4A9B-8B37-7C4D345076F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1450A5B7-1B09-4A9B-8B37-7C4D345076F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52611587-7466-422D-87E8-03615F2DDD42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52611587-7466-422D-87E8-03615F2DDD42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52611587-7466-422D-87E8-03615F2DDD42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52611587-7466-422D-87E8-03615F2DDD42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -209,6 +215,7 @@ Global
 		{65403BBB-61D1-4BA9-8C92-3DAA1D5163F2} = {AA9E98DF-E9E9-422A-925B-5238827491B7}
 		{D6C7A92D-B814-40E7-80E2-F776DBF388CC} = {AA9E98DF-E9E9-422A-925B-5238827491B7}
 		{1450A5B7-1B09-4A9B-8B37-7C4D345076F1} = {AA9E98DF-E9E9-422A-925B-5238827491B7}
+		{52611587-7466-422D-87E8-03615F2DDD42} = {AA9E98DF-E9E9-422A-925B-5238827491B7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {82592DCD-B675-4D0C-9EC2-0918A981A934}
