@@ -140,12 +140,12 @@ namespace _9_State.B
     {
         public override void Close()
         {
-//
+            //
         }
 
         public override void Open()
         {
-//
+            //
         }
 
         public override void Run()
@@ -157,6 +157,31 @@ namespace _9_State.B
         {
             base.context.LiftState = Context.stoppingState;
             base.context.LiftState.Stop();
+        }
+    }
+
+    public class StoppingState : LiftState
+    {
+        public override void Close()
+        {
+            //
+        }
+
+        public override void Open()
+        {
+            base.context.LiftState = Context.openningState;
+            base.context.LiftState.Open();
+        }
+
+        public override void Run()
+        {
+            base.context.LiftState = Context.runningState;
+            base.context.LiftState.Run();
+        }
+
+        public override void Stop()
+        {
+            Console.WriteLine("Stopping");
         }
     }
 }

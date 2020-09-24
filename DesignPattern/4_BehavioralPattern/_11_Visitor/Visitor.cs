@@ -99,6 +99,9 @@ namespace _11_Visitor
             employees.Add(new Employee("joe", 25000, 14));
             employees.Add(new Manager("alice", 22000, 14, "sales"));
             employees.Add(new Employee("peter", 15000, 7));
+
+            employees.Accept(new ExtraVacationVisitor());
+            employees.Accept(new RaiseSalaryVisitor());
         }
     }
 }
